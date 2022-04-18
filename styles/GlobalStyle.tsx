@@ -10,9 +10,10 @@ const style = css`
     margin: 0;
     padding: 0;
     overflow: initial !important;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.46668;
-    font-weight: 400;
+    font-weight: 300;
+    letter-spacing: -1px;
     text-decoration: none;
   }
   * {
