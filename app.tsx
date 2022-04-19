@@ -5,6 +5,9 @@ import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
+import { ThemeProvider } from '@emotion/react';
+import theme from '@styles/theme';
+
 import GlobalStyle from '@styles/GlobalStyle';
 import Router from '@routers/Router';
 
@@ -13,8 +16,10 @@ axios.defaults.baseURL = process.env.NODE_ENV === 'production' ? '' : 'http://lo
 
 render(
   <BrowserRouter>
-    <GlobalStyle />
-    <Router />
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Router />
+    </ThemeProvider>
   </BrowserRouter>,
   document.querySelector('#app'),
 );
